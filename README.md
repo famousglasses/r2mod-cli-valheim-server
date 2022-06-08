@@ -5,7 +5,7 @@
 
 A simple mod manager written in Bash for Linux users.
 
-![Screen](https://raw.githubusercontent.com/Foldex/r2mod_cli/master/img/screen.png)
+![Screen](https://raw.githubusercontent.com/famousglasses/r2mod-cli-valheim-server/master/screen.png)
 
 ## Features
 

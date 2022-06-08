@@ -11,6 +11,7 @@ A simple mod manager written in Bash for Linux users.
 
 - Simple No-Nonsense Usage
 - Setup BepInEx
+- Support for Multiple Server Instances
 - Install and Update Mods
 - Resolve Dependencies
 - Hold Specific Mods Back from Updating
@@ -45,6 +46,20 @@ alias r2mod-build-server="export R2MOD_BEPIN_DIR=BepInEx_Build; r2mod"
 alias r2mod-pvp-server="export R2MOD_BEPIN_DIR=BepInEx_PVP; r2mod"
 ```
 
+Step 3: Run the tool to setup BepInEx
+
+```
+r2mod setup
+
+✖ BepInEx Folder Not Found
+→ Setup New BepInEx Install? y/n
+y
+
+... setup will commence
+```
+
+Step 4: You are done!
+
 #### Dependencies
 
 ##### Arch
@@ -55,7 +70,7 @@ alias r2mod-pvp-server="export R2MOD_BEPIN_DIR=BepInEx_PVP; r2mod"
 
 `sudo dnf install curl findutils gawk jq p7zip sed`
 
-##### Ubuntu
+##### Ubuntu/Debiam
 
 `sudo apt-get install curl findutils gawk jq p7zip-full sed`
 

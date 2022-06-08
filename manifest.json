@@ -1,7 +1,7 @@
 {
-    "name": "r2mod_cli",
-    "version_number": "1.3.2",
-    "website_url": "https://github.com/foldex/r2mod_cli",
+    "name": "r2mod-cli-valheim-server",
+    "version_number": "1.4.0",
+    "website_url": "https://github.com/famousglasses/r2mod-cli-valheim-server",
     "description": "A simple CLI Mod Manager for Linux",
     "dependencies": []
 }

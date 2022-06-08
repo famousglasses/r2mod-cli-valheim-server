@@ -28,7 +28,13 @@ else
 	exit 1
 fi
 
-BEPIN_DIR="$R2_DIR/BepInEx"
+if [[ -n "$R2MOD_BEPIN_DIR" ]]; then
+	# Custom BepInEx location
+	BEPIN_DIR="$R2_DIR/$R2MOD_BEPIN_DIR"
+else
+	BEPIN_DIR="$R2_DIR/BepInEx"
+fi
+
 CONFIG_DIR="$BEPIN_DIR/config"
 PATCHERS_DIR="$BEPIN_DIR/patchers"
 PLUGINS_DIR="$BEPIN_DIR/plugins"
@@ -156,7 +162,7 @@ function colorize_mod_name {
 
 function find_mods {
 	[[ ! -d "$1" ]] && fatal_error "$1 dir does not exist"
-	find "$1" -maxdepth 1 -type d -name '*-*-*' -printf '%f\n'
+	find "$1" -maxdepth 1 -type d -name '*-*' -printf '%f\n'
 }
 
 function test_glob {

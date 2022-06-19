@@ -356,7 +356,7 @@ function update_check {
 	local api_json
 	local api_ver
 
-	api_json=$(jq -r -e --arg MOD "$R2MOD_STRING" '.[] | select(.full_name==$MOD) | .versions[0]' "$R2_FILE") || fatal_error "Failed to Parse JSON"
+	api_json=$(jq -r -e --arg MOD "$R2MOD_STRING" '.[] | select(.full_name==$MOD) | .versions[0]' "$API_FILE") || fatal_error "Failed to Parse JSON"
 	api_ver=$(echo "$api_json" | jq -r -e .version_number) || fatal_error "Failed to Parse JSON for version number"
 
 	if version_gt "$api_ver" "$VERSION"; then
